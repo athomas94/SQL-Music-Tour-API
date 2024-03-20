@@ -16,7 +16,8 @@ app.get('/', (req, res) => {
 })
 
 //DATABASE
-const sequelize = new Sequelize(process.env.DB_CONNECTION)
+const { sequelize } = require('./models')
+// const sequelize = new Sequelize(process.env.DB_CONNECTION)
 const connectionTest = async () => {
 try {
     await sequelize.authenticate();
