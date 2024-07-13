@@ -2,6 +2,7 @@
 const events = require('express').Router()
 const db = require('../models')
 const { Event } = db
+const { Op } = require('sequelize')
 
 //GET ALL EVENTS
 events.get('/', async (req, res) => {
@@ -63,7 +64,7 @@ events.delete('/:id', async (req, res) => {
             }
         })
         res.status(200).json({
-            message: 'Successfully deleted stage'
+            message: 'Successfully deleted event'
         })
     } catch(err) {
         res.status(500).json(err)

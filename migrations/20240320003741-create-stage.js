@@ -9,15 +9,18 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      stage_id :{
+        type: Sequelize.INTEGER
+      },
+      stage_name: {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
+        allowNull: truee,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
